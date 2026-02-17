@@ -31,6 +31,7 @@ export interface Project {
   readonly title: string;
   readonly category: string;
   readonly description: string;
+  readonly image: string;
 }
 
 export interface ContactInfo {
@@ -150,48 +151,56 @@ export const portfolioData: PortfolioData = {
       category: 'Automation',
       description:
         'Multi-platform CRM integration connecting Google Forms with Pipedrive, achieving 40% increase in sales productivity.',
+      image: 'linear-gradient(135deg, #1a1a2e, #16213e)',
     },
     {
       title: 'AI Content Management & Publishing Platform',
       category: 'AI',
       description:
         'Automated content pipeline leveraging OpenAI GPT models, reducing creation time by 90% and enabling 15+ articles weekly.',
+      image: 'linear-gradient(135deg, #1a2e1a, #163e2a)',
     },
     {
       title: 'Automated Data Extraction & Lead Intelligence',
       category: 'Data',
       description:
         'Multi-source data extraction generating 10,000+ qualified leads monthly with 95% data accuracy.',
+      image: 'linear-gradient(135deg, #2e1a1a, #3e1616)',
     },
     {
       title: 'Airtable Enterprise Database Architecture',
       category: 'Database',
       description:
         'Complex relational database supporting 50+ team members across 8 departments, improving data accuracy from 75% to 98%.',
+      image: 'linear-gradient(135deg, #1a1a3e, #21163e)',
     },
     {
       title: 'AI-Powered Voice Agent System',
       category: 'AI',
       description:
         'Conversational AI system handling 500+ calls weekly with 85% resolution rate and 70% cost reduction.',
+      image: 'linear-gradient(135deg, #2e2e1a, #3e3416)',
     },
     {
       title: 'Learning Management System for Madaris',
       category: 'Development',
       description:
         'Three-portal LMS built with React.js and .NET Core supporting Admin, Teacher, and Student roles with multilingual support.',
+      image: 'linear-gradient(135deg, #2e1a2e, #3e1638)',
     },
     {
       title: 'Notion Knowledge Management System',
       category: 'Automation',
       description:
         'Centralized knowledge system for 30+ team members reducing information search time by 45%.',
+      image: 'linear-gradient(135deg, #1a2e2e, #163e3e)',
     },
     {
       title: 'Email Marketing & Communication Automation',
       category: 'Automation',
       description:
         'Sophisticated email marketing platform with dynamic personalization, A/B testing, and automated drip campaigns.',
+      image: 'linear-gradient(135deg, #2e1a24, #3e1628)',
     },
   ] as const,
 

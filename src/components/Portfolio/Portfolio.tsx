@@ -38,10 +38,19 @@ function Portfolio() {
         <div className={styles.projectGrid}>
           {filteredProjects.map((project) => (
             <div key={project.title} className={styles.projectCard}>
-              <div className={styles.projectThumb}>
-                <span className={styles.projectCategory}>{project.category}</span>
-              </div>
+              {project.image.startsWith('/')
+                ? <img
+                    src={project.image}
+                    alt={project.title}
+                    className={styles.projectImage}
+                  />
+                : <div
+                    className={styles.projectImage}
+                    style={{ background: project.image }}
+                  />
+              }
               <div className={styles.projectInfo}>
+                <span className={styles.projectCategory}>{project.category}</span>
                 <h3 className={styles.projectTitle}>{project.title}</h3>
                 <p className={styles.projectDesc}>{project.description}</p>
               </div>

@@ -1,8 +1,9 @@
 .hero {
+  padding-top: calc(var(--navbar-height) + 2rem);
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 5rem;
+  justify-content: center;
   background: radial-gradient(ellipse at top right, rgba(249, 115, 22, 0.08) 0%, transparent 50%);
 }
 
@@ -21,7 +22,7 @@
 
 .headline {
   font-family: var(--font-heading);
-  font-size: 3.5rem;
+  font-size: clamp(2.8rem, 7vw, 6.5rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.25rem;
@@ -101,10 +102,6 @@
 }
 
 @media (max-width: 768px) {
-  .headline {
-    font-size: 2.5rem;
-  }
-
   .statsRow {
     gap: 2rem;
   }
@@ -115,10 +112,6 @@
 }
 
 @media (max-width: 480px) {
-  .headline {
-    font-size: 2rem;
-  }
-
   .subheading {
     font-size: 1rem;
   }
