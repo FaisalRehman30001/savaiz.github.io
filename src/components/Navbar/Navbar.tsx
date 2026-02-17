@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { portfolioData } from '../../data/portfolio'
 import styles from './Navbar.module.css'
 
+const sectionIds = portfolioData.navLinks.map((link) => link.href.replace('#', ''));
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('#home');
@@ -11,8 +13,6 @@ function Navbar() {
   const handleLinkClick = () => setIsOpen(false);
 
   useEffect(() => {
-    const sectionIds = portfolioData.navLinks.map((link) => link.href.replace('#', ''));
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
