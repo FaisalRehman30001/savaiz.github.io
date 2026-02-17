@@ -44,8 +44,8 @@ function About() {
                 <span className={styles.infoValue}>{portfolioData.contactInfo.phone}</span>
               </div>
             </div>
-            <a href={`${basePath}cv.pdf`} download className="btn-outline">
-              Download CV
+            <a href={`${basePath}cv.pdf`} target="_blank" rel="noopener noreferrer" className="btn-outline">
+              Open CV
             </a>
           </div>
         </div>

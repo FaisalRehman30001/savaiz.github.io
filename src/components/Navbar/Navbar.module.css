@@ -60,6 +60,14 @@
   width: 100%;
 }
 
+.navLinks a.activeLink {
+  color: var(--accent);
+}
+
+.navLinks a.activeLink::after {
+  width: 100%;
+}
+
 .hireMeBtn {
   padding: 0.625rem 1.5rem;
   font-size: 0.9rem;

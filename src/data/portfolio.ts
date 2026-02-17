@@ -1,5 +1,10 @@
 // ─── Single Source of Truth — All data from Muhammad Savaiz Khan CV ───
 
+import aiVoiceAgentImg from '../assets/projectsImage/AI-PoweredVoiceAgentSystem.jpg'
+import airtableDbImg from '../assets/projectsImage/AirtableEnterpriseDatabaseArchitecture.png'
+import lmsImg from '../assets/projectsImage/LearningManagementSystemforMadaris.jpg'
+import notionKmsImg from '../assets/projectsImage/NotionKnowledgeManagementSystem.png'
+
 export interface NavLink {
   readonly label: string;
   readonly href: string;
@@ -172,28 +177,28 @@ export const portfolioData: PortfolioData = {
       category: 'Database',
       description:
         'Complex relational database supporting 50+ team members across 8 departments, improving data accuracy from 75% to 98%.',
-      image: 'linear-gradient(135deg, #1a1a3e, #21163e)',
+      image: airtableDbImg,
     },
     {
       title: 'AI-Powered Voice Agent System',
       category: 'AI',
       description:
         'Conversational AI system handling 500+ calls weekly with 85% resolution rate and 70% cost reduction.',
-      image: 'linear-gradient(135deg, #2e2e1a, #3e3416)',
+      image: aiVoiceAgentImg,
     },
     {
       title: 'Learning Management System for Madaris',
       category: 'Development',
       description:
         'Three-portal LMS built with React.js and .NET Core supporting Admin, Teacher, and Student roles with multilingual support.',
-      image: 'linear-gradient(135deg, #2e1a2e, #3e1638)',
+      image: lmsImg,
     },
     {
       title: 'Notion Knowledge Management System',
       category: 'Automation',
       description:
         'Centralized knowledge system for 30+ team members reducing information search time by 45%.',
-      image: 'linear-gradient(135deg, #1a2e2e, #163e3e)',
+      image: notionKmsImg,
     },
     {
       title: 'Email Marketing & Communication Automation',
@@ -209,4 +214,4 @@ export const portfolioData: PortfolioData = {
     phone: '+92 303 5517417',
     location: 'Rawalpindi, Pakistan',
   },
-} as const;
+};

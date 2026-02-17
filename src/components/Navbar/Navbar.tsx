@@ -1,13 +1,36 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { portfolioData } from '../../data/portfolio'
 import styles from './Navbar.module.css'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('#home');
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const handleLinkClick = () => setIsOpen(false);
+
+  useEffect(() => {
+    const sectionIds = portfolioData.navLinks.map((link) => link.href.replace('#', ''));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(`#${entry.target.id}`);
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <nav className={styles.navbar}>
@@ -31,7 +54,11 @@ function Navbar() {
         <ul className={`${styles.navLinks} ${isOpen ? styles.active : ''}`}>
           {portfolioData.navLinks.map((link) => (
             <li key={link.href}>
-              <a href={link.href} onClick={handleLinkClick}>
+              <a
+                href={link.href}
+                onClick={handleLinkClick}
+                className={activeSection === link.href ? styles.activeLink : ''}
+              >
                 {link.label}
               </a>
             </li>

@@ -39,8 +39,8 @@ function Hero() {
           <a href="#contact" className="btn-primary">
             Hire Me
           </a>
-          <a href={`${basePath}cv.pdf`} download className="btn-outline">
-            Download CV
+          <a href={`${basePath}cv.pdf`} target="_blank" rel="noopener noreferrer" className="btn-outline">
+            Open CV
           </a>
         </div>
 
