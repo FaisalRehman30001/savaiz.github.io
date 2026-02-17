@@ -47,6 +47,8 @@ function Portfolio() {
                 : <div
                     className={styles.projectImage}
                     style={{ background: project.image }}
+                    role="img"
+                    aria-label={project.title}
                   />
               }
               <div className={styles.projectInfo}>
