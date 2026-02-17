@@ -11,7 +11,7 @@ A responsive, dark-themed single-page portfolio website built with React + TypeS
 - **Framework:** React 18 + TypeScript (strict mode)
 - **Bundler:** Vite
 - **Styling:** CSS Modules
-- **Fonts:** Syne (headings) + DM Sans (body) via Google Fonts
+- **Fonts:** Plus Jakarta Sans (headings) + Manrope (body) via Google Fonts
 - **Deployment:** GitHub Pages via GitHub Actions
 
 ## Setup
